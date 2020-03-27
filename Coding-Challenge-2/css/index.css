@@ -1,7 +1,72 @@
-
-
 div{
     border: 1px solid black;
     padding: 5px;
 }
+.container{
+    display:flex;
+    border: 5px #000 solid;
+    padding: 5px;
+}
 
+.heading{
+    display:flex;
+    border: 5px #000 solid;
+    visibility: hidden;
+}
+
+.navigation{
+    display:flex;
+    border: 5px #000 solid;
+    flex-direction: row;
+    text-align: center;
+}
+
+
+.content{
+    display:flex;
+    border: 5px #000 solid;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.side{
+    display:flex;
+    border: 5px #000 solid;
+    flex-direction: column;
+}
+
+.main{
+    display:flex;
+}
+
+@media (min-width: 991px) {
+    .heading{
+        display:flex;
+        border: 5px #000 solid;
+        visibility: visible;
+    }
+
+    .navigation{
+        width: 12%;
+    }
+
+    .main{
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 990px){
+    .navigation{
+        width: 25%;
+    }
+    .main{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 599px){
+    .navigation{
+        width: 50%;
+    }
+}
